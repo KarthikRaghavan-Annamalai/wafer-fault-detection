@@ -38,7 +38,7 @@ jobs:
       - setup_remote_docker:
           version: 19.03.13
       - run:
-          name: Build and push Docker image
+          name: build and push docker image
           command: |
             docker build -t $DOCKERHUB_USER/$IMAGE_NAME:$TAG .
             echo $DOCKER_HUB_PASSWORD_USER | docker login -u $DOCKERHUB_USER --password-stdin
